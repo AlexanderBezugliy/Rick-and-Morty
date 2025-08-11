@@ -5,9 +5,6 @@ import Link from "next/link";
 import React from "react";
 
 const LogIn = () => {
-
-    
-
     return (
         <div 
             className="flex justify-center items-center h-[90vh] px-2"
@@ -63,10 +60,9 @@ const LogIn = () => {
                     {/* .register-link */}
                     <div className="text-sm text-center mt-5 mb-4">
                         <p className="font-mono">
-                            Don't have an account?{" "}
+                            Don`t have an account?{" "}
                             <Link
                                 href="/registration"
-                                // a
                                 className="text-black no-underline font-semibold transition-colors duration-300 hover:underline hover:text-sky-300"
                             >
                                 Register

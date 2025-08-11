@@ -24,10 +24,9 @@ export default function Home() {
         setPage(1);
     }, [status, gender, species]);
 
-    const handlePageChange = (_: any, value: number) => {
+    const handlePageChange = (_: number, value: number) => {
         setPage(value);
-
-        window.scrollTo({ top: 0, behavior: "smooth" }); // прокрутка вверх
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     // Pagination_Responsive
