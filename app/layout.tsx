@@ -14,7 +14,7 @@ import BackgroundWrapper from "@/components/BackgroundWrapper";
 // });
 import { Bitcount_Grid_Double } from 'next/font/google'; 
 
-const bitcountPropDouble = Bitcount_Grid_Double({ 
+const bitcountGridDouble = Bitcount_Grid_Double({ 
     subsets: ['latin'],
     // weight: ['200', '300', '400', '500', '600', '700', '800', '900'], 
     variable: '--font-bitcount', 
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${bitcountPropDouble.className}`}>
+            <body className={`${bitcountGridDouble.className}`}>
                 <ReduxProvider>
                     <BackgroundWrapper>
                         {children}
