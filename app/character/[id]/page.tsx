@@ -8,20 +8,20 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { Character } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
 
-
-interface CharacterPageProps {
-    params: { id: string };
-}
-const CharacterPage: React.FC<CharacterPageProps> = () => {
+// interface CharacterPageProps {
+//     params: { id: string };
+// }
+// const CharacterPage: React.FC<CharacterPageProps> = () => {
+const CharacterPage = ({ params }: { params: { id: string } }) => {
     const [showAllEpisodes, setShowAllEpisodes] = useState(false);
 
-    const params = useParams();
-    const characterId = params.id as string;
+    // const params = useParams();
+    // const characterId = params.id as string;
+    const characterId = params.id
 
     const { data: character, isLoading, isError } = useGetCharacterByIdQuery(characterId) as {
         data: Character | undefined;
