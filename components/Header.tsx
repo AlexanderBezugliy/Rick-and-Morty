@@ -132,7 +132,7 @@ const Header = ({ onOpenBasket }: HeaderProps) => {
                             </li>
                             <li>
                                 {/* MOBILE Search */}
-                                <SearchComponent />
+                                <SearchComponent onClose={() => setIsOpen(false)} />
                             </li>
                         </ul>
                     </motion.div>

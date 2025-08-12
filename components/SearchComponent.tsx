@@ -7,7 +7,10 @@ import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import LoadingSpinner from "./LoadingSpinner";
 
-const SearchComponent = () => {
+interface SearchComponentProps {
+    onClose: () => void
+}
+const SearchComponent = ({ onClose }: SearchComponentProps) => {
     const [search, setSearch] = useState("");
 
     const { data, isLoading, isError } = useGetCharactersByNameQuery(search, { skip: search.length === 0 });
@@ -43,7 +46,10 @@ const SearchComponent = () => {
                         <Link
                             key={char.id}
                             href={`/character/${char.id}`}
-                            onClick={() => setSearch("")}
+                            onClick={() => {
+                                setSearch("");
+                                onClose();
+                            }}
                             className="flex items-center gap-4 p-2 hover:bg-blue-100 transition-all cursor-pointer border-b last:border-b-0"
                         >
                             <Image
