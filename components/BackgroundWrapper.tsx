@@ -24,7 +24,7 @@ const BackgroundWrapper = ({ children }: { children: React.ReactNode }) => {
     const closeCart = useCallback(() =>  setIsCartOpen(false),[]);
     
     return (
-        <div className={`min-h-screen bg-fixed bg-center bg-no-repeat ${backgroundClass}`}>
+        <div className={`min-h-screen bg-fixed bg-cover bg-no-repeat ${backgroundClass}`}>
             <motion.div
                 {...headerUp}
             >

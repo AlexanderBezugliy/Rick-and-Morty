@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${bitcountGridDouble.className}`}>
+            <body className={`${bitcountGridDouble.className} h-full min-h-full`}>
                 <ReduxProvider>
                     <BackgroundWrapper>
                         {children}
