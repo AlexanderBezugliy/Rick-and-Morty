@@ -42,7 +42,7 @@ const Header = ({ onOpenBasket }: HeaderProps) => {
                 </Link>
                 {/* SEARCH */}
                 <div className="hidden sm:block">
-                    <SearchComponent  />
+                    <SearchComponent onClose={() => {}}/>
                 </div>
             </div>
 
