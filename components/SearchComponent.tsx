@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 import LoadingSpinner from "./LoadingSpinner";
 
 interface SearchComponentProps {
-    onClose: () => void
+    onClose?: () => void;
 }
 const SearchComponent = ({ onClose }: SearchComponentProps) => {
     const [search, setSearch] = useState("");
