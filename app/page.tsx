@@ -5,6 +5,7 @@ import { cards, filters, portal } from "@/utils/animations";
 import { Pagination, Stack, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -24,10 +25,14 @@ export default function Home() {
         setPage(1);
     }, [status, gender, species]);
 
-    const handlePageChange = (_: number, value: number) => {
+    const handlePageChange = (_event: ChangeEvent<unknown>, value: number) => {
         setPage(value);
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
+    // const handlePageChange = (_: number | string, value: number) => {
+    //     setPage(value);
+    //     window.scrollTo({ top: 0, behavior: "smooth" });
+    // };
 
     // Pagination_Responsive
     const isMobile = useMediaQuery("(max-width:600px)");

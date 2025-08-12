@@ -18,15 +18,20 @@ interface CharacterDetailsProps {
 const CharacterDetails = ({ characterId }: CharacterDetailsProps) => {
     const [showAllEpisodes, setShowAllEpisodes] = useState(false);
 
+    // const {
+    //     data: character,
+    //     isLoading,
+    //     isError,
+    // } = useGetCharacterByIdQuery(characterId) as {
+    //     data: Character | undefined;
+    //     isLoading: boolean;
+    //     isError: boolean;
+    // };
     const {
         data: character,
         isLoading,
         isError,
-    } = useGetCharacterByIdQuery(characterId) as {
-        data: Character | undefined;
-        isLoading: boolean;
-        isError: boolean;
-    };
+    } = useGetCharacterByIdQuery(characterId);
 
     const dispatch = useAppDispatch();
     const favorites = useAppSelector((state) => state.characters.characters);
